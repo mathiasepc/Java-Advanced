@@ -1,0 +1,5 @@
+Hvis man vil se hvad generics er under the hood:
+step 1 kan være unødvendig.
+1) klik build -> build project.
+2) vælg den generiske fil.
+3) view -> show bytecode.

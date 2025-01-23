@@ -1,5 +1,25 @@
 Hvis man vil se hvad generics er under the hood:
-step 1 kan være unødvendig.
 1) klik build -> build project.
 2) vælg den generiske fil.
 3) view -> show bytecode.
+
+------- forskel på Objekt og Generics -----------
+Forskellen på generic og object:
+- generic får du compile time error.
+- Object får du runtime error. Dvs. man skal gennemtest sin kode
+- for at være sikker på at den ikke fejler
+
+------- Generics -----------
+Der er 2 konventionerne for at beskrive hvilken type man arbejder med
+<T> = type or template
+<E> = Element, det er når en class opfører sig som en collection.
+
+Man kan også specificere hvad T kun må være
+F.eks. Number, Comparable, String osv.
+Man kan også tilføje flere constraints: <T extends Comparable & Cloneable>
+Det betyder, at typen, som parses ind, skal have alle extends.
+
+KIG PÅ UTILS HVIS DU VIL SE GENERISKE METODER OG IKKE GENERISK CLASS.
+
+Der er noget som hedder wildcard = '?'.
+Jeg forstod det ikke helt. se wildcard igen.

@@ -1,10 +1,5 @@
 package generics;
 
-// Forskellen på generic og object:
-// - generic får du compile time error.
-// - Object får du runtime error. Dvs. man skal gennemtest sin kode
-// for at være sikker på at den ikke fejler
-
 public class Main {
     public static void main(String[] args) {
         var max = Utils.max(new User(10),new User(20));

@@ -1,0 +1,14 @@
+------- Functional interfaces -------
+Der er 4 typer af functional interfaces:
+1) Consumer
+- en operation, har et single argument og ingen return statement
+void print(String message)
+2) Supplier
+- en operation, ingen argumenter og return statement
+obj supply()
+3) Function
+- Er en funktion som mapper et value til et andet value.
+obj map(obj)
+4) Predicate
+- Er en operation, tager et argument og tjekker om bool statment
+opfylder kravene (bool test(condition)). filter data

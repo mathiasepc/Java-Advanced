@@ -1,7 +1,8 @@
-package lambdas;
+package streams;
+
 
 public class Main {
     public static void main(String[] args) {
-        LambdasDemo.predicateInterface();
+        StreamsDemo.slicing();
     }
 }

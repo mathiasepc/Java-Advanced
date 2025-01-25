@@ -1,0 +1,16 @@
+----- Streams ------
+returns a stream of objects.
+Det er en måde, at få data fra en collection
+
+Der er 2 kategorier for stream:
+1) Intermediate, de returnerer en ny stream.
+f.eks. map() eller filter().
+2) Terminal, det er void. De returner intet.
+f.eks. forEach()
+
+----- Stream object -----
+Stream skyder bare afsted, men en stream bliver 'aktiv':
+// ikke aktiv. Det hedder lazy evaluation.
+var stream = Stream.generate(() -> Math.random());
+// aktiv
+stream.forEach(System.out::println);

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.function.*;
 
 public class LambdasDemo {
-    public static void show() {
+    public static void binaryAndUnaryOperator() {
         BinaryOperator<Integer> add = Integer::sum;
         Function<Integer,Integer> square = a -> a*a;
         var result = add.andThen(square).apply(1,2);
@@ -16,7 +16,7 @@ public class LambdasDemo {
 
     }
 
-/* !!! Predicate !!!
+    public static void predicateInterface(){
         Predicate<String> isLongerThan5 = str -> str.length() > 5;
 
         System.out.println(isLongerThan5.test("hej"));
@@ -32,9 +32,9 @@ public class LambdasDemo {
         // .negate() Er det samme som at skrive not='!'.
         // return true
         System.out.println(leftBrace.negate().test("w"));
-* */
+    }
 
-/* !!! Interface Function<T,R> && Composing Function !!!
+    public static void functionInterface(){
         Function<String, Integer> map =
                 str -> str.length();
 
@@ -51,14 +51,14 @@ public class LambdasDemo {
                 .apply("key:value");
 
         System.out.println(result);
-* */
+    }
 
-/* !!! Supplier functional interface !!!
+    public static void supplierInterface(){
         Supplier<Double> getRandom = () -> Math.random();
         System.out.println(getRandom.get());
-* */
+    }
 
-/* !!! Consumer functional interface !!!
+    public static void consumerFunctionalInterface(){
         List<String> list = List.of("a", "b", "c");
         //List<Integer> list = List.of(1,2,3);
         Consumer<String> print = System.out::println;
@@ -75,17 +75,15 @@ public class LambdasDemo {
             System.out.println(item);
         // Declarative programming
         list.forEach(System.out::println);
-* */
+    }
 
-/* !!! Lambda !!!
+    /// De hører sammen.
     public static String prefix = "-";
-
     public LambdasDemo(String message){
 
     }
-
     public static void print(String message){}
-    public static void show() {
+    public static void lambdaExample(){
         // Fordi, at vi har et interface, i parameter,
         // kan vi bruge lambda. Da metoden er void i interface,
         // tilader den en sout som er void
@@ -100,9 +98,8 @@ public class LambdasDemo {
         greet(message -> new LambdasDemo(message));
         greet(LambdasDemo::new);
     }
-
     public static void greet(Printer printer) {
         printer.print("hello world");
     }
-* */
+
 }

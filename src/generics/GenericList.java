@@ -2,6 +2,7 @@ package generics;
 
 import java.util.Iterator;
 
+// Den tager kun referencec types
 public class GenericList<T> implements Iterable<T> {
     // Man kan ikke gøre følgende fordi den ikke ved hvad T er:
     // private T[] items = new T[10];

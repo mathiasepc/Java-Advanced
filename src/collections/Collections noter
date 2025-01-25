@@ -1,0 +1,59 @@
+Hieraki:
+super classes
+Iterable<> -> Collection<> ->
+Alle 3 arver fra Collection:
+1) List -> ArrayList -> LinkedList
+2) Queue -> PriorityQueue/ArrayDeque
+3) Set -> HashSet
+
+--------- iterables ---------
+Man kan ikke iterate over en generisk list uden at implementere
+interface Iterable<T>. Når det er implementeret kan man ændre den
+collection, som man iterate over uden, at det vil byde koden de steder
+man iterate på listen.
+Man skal også implementerer interfacet Iterator<T> for at få det til at virke.
+
+Se GenericList hvordan Iterable<T> skal implementeres.
+
+--------- Collection ---------
+Under støtter ikke indexing.
+
+--------- Queue ---------
+Queue bruges til, hvor man har brug for en kø til noget.
+F.eks. hvis man skal lave en kø til en printer, er Queue godt at bruge.
+
+Der er 2 mest normale man kan bruge til queue: ArrayDeque og PriorityQueue.
+- ArrayDeque: items can enter from either ends.
+- PriorityQueue: each item gets a priority. Altså items med højeste
+prioritet kommer forrest
+
+Man skal være opmærksom når man bruger nogen metoder. Der er nogen,
+som caster tilbage, hvis Queue er null og andre returnere bare null
+
+--------- Set ---------
+HashSet() kan man altid regne med, at de er unikke.
+Men ift. hvordan man adder dem, ligger de random
+
+--------- HashTable<K,V> ---------
+- Erklær: Map<String, Customer> map = new HashMap();
+- Et HashTable under the hood: var person = { name: "a" }
+- Man kan ikke iterate på et HashTable
+
+hvis man leder efter en bestem kunde og ikke vil lave 10 if else,
+for at finde den rigtige kunde
+Big 'O'(n) hvor n er antal
+O(n) -> O(10)
+Derfor bruger man HashTable.
+
+List<Customer> customers = new ArrayList<>();
+for(var customer : customers){
+    // Hvis ikke man bruger et HashTable, ville dette blive en lang if else
+    if(customer.getEmail() == "e1")
+    System.out.println("found");
+}
+
+Hvad man kalder HashTable i forskellige sporg
+Java: Maps eller HashMaps
+C#: Dictionary
+Python: Dictionary
+JavaScript: Objects

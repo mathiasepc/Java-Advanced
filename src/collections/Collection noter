@@ -1,8 +1,0 @@
---------- iterables ---------
-Man kan ikke iterate over en generisk list uden at implementere
-interface Iterable<T>. Når det er implementeret kan man ændre den
-collection, som man iterate over uden, at det vil byde koden de steder
-man iterate på listen.
-Man skal også implementerer interfacet Iterator<T> for at få det til at virke.
-
-Se GenericList hvordan Iterable<T> skal implementeres.

@@ -14,3 +14,7 @@ Stream skyder bare afsted, men en stream bliver 'aktiv':
 var stream = Stream.generate(() -> Math.random());
 // aktiv
 stream.forEach(System.out::println);
+
+----- peek() ------
+peek method tillader, at vi kan søge efter fejl,
+hvis vi ikke får ønsket resultat

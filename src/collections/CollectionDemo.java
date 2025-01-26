@@ -20,9 +20,6 @@ public class CollectionDemo {
         collection.clear();
         var isEmpty = collection.isEmpty();
 
-        Object[] objectArray = collection.toArray();
-        String[] stringArray = collection.toArray(new String[0]);
-
         Collection<String> other = new ArrayList<>();
         other.add("a");
         other.add("b");

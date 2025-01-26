@@ -1,12 +1,13 @@
 package collections;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        setAndHashSet();
+    }
+
+    public static void mapHashTable(){
         var c1 = new Customer("a","e1");
         var c2 = new Customer("b","e2");
         Map<String,Customer> map = new HashMap<>();
@@ -47,9 +48,8 @@ public class Main {
             System.out.println(customer1);
         }
     }
-}
-/*
-* !!! Set/HashSet() !!!
+
+    public static void setAndHashSet(){
         Collection<String> collection = new ArrayList<>();
         Collections.addAll(collection, "a","b","c","c");
         // fjerner duplikat
@@ -59,18 +59,19 @@ public class Main {
         Set<String> set1 = new HashSet<>(Arrays.asList("a","b","c"));
         Set<String> set2 = new HashSet<>(Arrays.asList("b","c","d"));
 
-        // Union, combination af 2 sets. Man kan parse queue og ArrayList.
+        // Indsætter set2 i set1. Men kun værdier, som set1 ikke har.
+        // Man kan også parse queue og ArrayList.
         set1.addAll(set2);
 
-        // beholder alle fra set2 og indsætter i set1
+        // set1 har kun værdierne, som er ens imellem set1 og set2
         set1.retainAll(set2);
 
-        // Fjerner alle som er ens.
+        // Fjerner alle som er ens, fra set1.
         set1.removeAll(set2);
-* */
 
-/*
-* !!! Queue !!!
+    }
+
+    public static void queueAndDeque(){
         Queue<String> queue = new ArrayDeque<>();
         // Nogen queue har en limit size.
         // add() throws an exceptions hvis man kommer også limit
@@ -94,4 +95,5 @@ public class Main {
         // fjerner første første item og returnere den.
         // hvis queue er item, returner null.
         queue.poll();
-* */
+    }
+}

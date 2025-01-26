@@ -5,7 +5,7 @@ public class List {
     private int count;
 
     public void add(Object item){
-        // Efter at den er loade count, gå en op.
+        // Efter at har indsat item, count gå en op.
         items[count++] = item;
     }
 

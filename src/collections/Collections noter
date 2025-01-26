@@ -43,7 +43,7 @@ hvis man leder efter en bestem kunde og ikke vil lave 10 if else,
 for at finde den rigtige kunde
 Big 'O'(n) hvor n er antal
 O(n) -> O(10)
-Derfor bruger man HashTable.
+Derfor bruger man HashTable. Det er lettere og hurtigere at søge i.
 
 List<Customer> customers = new ArrayList<>();
 for(var customer : customers){

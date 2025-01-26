@@ -4,17 +4,6 @@ import java.util.List;
 import java.util.function.*;
 
 public class LambdasDemo {
-    public static void binaryAndUnaryOperator() {
-        BinaryOperator<Integer> add = Integer::sum;
-        Function<Integer,Integer> square = a -> a*a;
-        var result = add.andThen(square).apply(1,2);
-        // System.out.println(result);
-
-        UnaryOperator<Integer> square2 = a -> a*a;
-        var result2 = square2.andThen(square).apply(2);
-        System.out.println(result2);
-
-    }
 
     public static void predicateInterface(){
         Predicate<String> isLongerThan5 = str -> str.length() > 5;
@@ -35,10 +24,10 @@ public class LambdasDemo {
     }
 
     public static void functionInterface(){
-        Function<String, Integer> map =
+        Function<String, Integer> getStringLength =
                 str -> str.length();
 
-        System.out.println(map.apply("string"));
+        System.out.println(getStringLength.apply("string"));
 
         Function<String,String> replace =
                 str -> str.replace(":", "=");
@@ -77,7 +66,19 @@ public class LambdasDemo {
         list.forEach(System.out::println);
     }
 
-    /// De hører sammen.
+    public static void binaryAndUnaryOperator() {
+        BinaryOperator<Integer> add = Integer::sum;
+        Function<Integer,Integer> square = a -> a*a;
+        var result = add.andThen(square).apply(1,2);
+        // System.out.println(result);
+
+        UnaryOperator<Integer> square2 = a -> a*a;
+        var result2 = square2.andThen(square).apply(2);
+        System.out.println(result2);
+
+    }
+
+    /// ----------- De hører sammmen ----------
     public static String prefix = "-";
     public LambdasDemo(String message){
 
@@ -101,5 +102,5 @@ public class LambdasDemo {
     public static void greet(Printer printer) {
         printer.print("hello world");
     }
-
+    // -------------------------------------
 }
